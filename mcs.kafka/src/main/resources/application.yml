@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: mcs-kafka
+
+kafka:
+  bootstrap-servers: localhost:9093
+  #    security:
+  #      protocol: ${KAFKA_SECURITY_PROTOCOL}
+  #    properties:
+  #      sasl:
+  #        mechanism: ${KAFKA_SASL_MECHANISM}
+  #        jaas.config: ${KAFKA_JAAS_CONFIG}
+  consumer:
+    group-id: mcs-kafka
+    key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+    properties:
+      spring.json.trusted.packages: "com.roshka.finnekta.bean"
+  producer:
+    key-serializer: org.apache.kafka.common.serialization.StringSerializer
+    value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    properties:
+      spring.json.trusted.packages: "com.roshka.finnekta.bean"

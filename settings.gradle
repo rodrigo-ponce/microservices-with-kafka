@@ -1,0 +1,5 @@
+rootProject.name = 'microservices-with-kafka'
+
+include 'api.kafka'
+include 'mcs.kafka'
+include 'lib.commons'
