@@ -81,3 +81,7 @@ services:
       SERVER_PORT: 8080
     networks:
       - finnekta-core
+
+networks:
+  finnekta-core:
+    name: finnekta-core

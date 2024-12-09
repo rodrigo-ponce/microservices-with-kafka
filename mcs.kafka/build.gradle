@@ -6,6 +6,7 @@ repositories {
 }
 
 dependencies {
+	implementation project(':lib.commons')
 }
 
 tasks.named('test') {
